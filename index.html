@@ -7,7 +7,8 @@
     <title>Flight Booking</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -40,72 +41,72 @@
                 </div>
                 <div class="inputs">
                     <div class="input-group">
-                        <label " for=" ">Departure</label>
-                            <input class="inp-style " type="date " name=" ">
+                        <label" for="">Departure</label>
+                            <input class="inp-style" type="date" name="">
                     </div>
-                    <div class="input-group ">
-                        <label for=" ">Return</label>
-                        <input class="inp-style " type="date " name=" ">
+                    <div class="input-group">
+                        <label for="">Return</label>
+                        <input class="inp-style" type="date" name="">
                     </div>
                 </div>
-                <div class="input-group f-class ">
+                <div class="input-group f-class">
                     <div>
-                        <label for=" ">First Class <span style="font-size: large; color: rgb(241, 133, 10); ">($150)</span> </label>
-                        <input id="firstClass-add " class="inp-style inp-width " type="number " name=" " value="0 ">
+                        <label for="">First Class <span style="font-size: large; color: rgb(241, 133, 10);">($150)</span> </label>
+                        <input id="firstClass-add" class="inp-style inp-width" type="number" name="" value="0">
                     </div>
-                        <button onclick="ticketCalculation(true, 'firstClass-add') "><span
-                            class="plus-minus-btn ">+</span></button>
-                    <button onclick="ticketCalculation(false, 'firstClass-add') "><span
-                            class="plus-minus-btn ">-</span></button>
+                        <button onclick="ticketCalculation(true,'firstClass-add')"><span
+                            class="plus-minus-btn">+</span></button>
+                    <button onclick="ticketCalculation(false,'firstClass-add')"><span
+                            class="plus-minus-btn">-</span></button>
                     
                     
                 </div>
 
-                <div class="input-group f-class ">
+                <div class="input-group f-class">
                     <div>
-                        <label for=" ">Economy <span style="font-size: large; color: rgb(241, 133, 10); ">($100)</span> </label>
-                        <input id="economyClass-add " class="inp-style inp-width " type="number " name=" " value="0 ">
+                        <label for="">Economy <span style="font-size: large; color: rgb(241, 133, 10);">($100)</span> </label>
+                        <input id="economyClass-add" class="inp-style inp-width" type="number" name="" value="0">
                     </div>
                     
-                    <button onclick="ticketCalculation(true, 'economyClass-add') "><span
-                            class="plus-minus-btn ">+</span></button>
-                    <button onclick="ticketCalculation(false, 'economyClass-add') "><span
-                            class="plus-minus-btn ">-</span></button>
+                    <button onclick="ticketCalculation(true,'economyClass-add')"><span
+                            class="plus-minus-btn">+</span></button>
+                    <button onclick="ticketCalculation(false,'economyClass-add')"><span
+                            class="plus-minus-btn">-</span></button>
                 </div>
             </div>
-            <div id="calculateSummary " class="calculations ">
-                <div class="amount ">
-                    <div class="left ">
+            <div id="calculateSummary" class="calculations">
+                <div class="amount">
+                    <div class="left">
                         <p>Subtotal</p>
                     </div>
-                    <div class="right ">
-                        <p>$ <span id="subTotal ">0</span></p>
+                    <div class="right">
+                        <p>$ <span id="subTotal">0</span></p>
                     </div>
                 </div>
 
-                <div class="amount ">
-                    <div class="left ">
-                        <p>Charge 10% VAT</p>
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% tex</p>
                     </div>
-                    <div class="right ">
-                        <p>$ <span id="tex ">0</span></p>
+                    <div class="right">
+                        <p>$ <span id="tex">0</span></p>
                     </div>
                 </div>
                 <hr>
-                <div class="amount ">
-                    <div class="left ">
+                <div class="amount">
+                    <div class="left">
                         <h4>Total</h4>
                     </div>
-                    <div class="right ">
-                        <p>$ <span id="total ">0</span></p>
+                    <div class="right">
+                        <p>$ <span id="total">0</span></p>
                     </div>
                 </div>
             </div>
             
-            <button id="book-btn " onclick= "message() " class="btn-style ">Book Now</button>
+            <button id="book-btn" onclick= "message()" class="btn-style">Book Now</button>
         </div>
 
-        <div class="booking-content ">
+        <div class="booking-content">
             <h1>discover <br> around the world</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
                 veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
@@ -119,9 +120,7 @@
             function ticketCalculation(isIncrease, classCountId) {
                 const ticketCount = document.getElementById(classCountId).value;
                 const ticketCountNumber = parseFloat(ticketCount);
-
                 let newTicketCount = ticketCountNumber;
-
                 if (isIncrease == true) {
                     newTicketCount = ticketCountNumber + 1;
                 }
@@ -134,35 +133,35 @@
             }
 
             function totalCoast() {
-                const firstClassTotal = document.getElementById("firstClass-add ").value;
+                const firstClassTotal = document.getElementById("firstClass-add").value;
                 const firstClassTotalNumber = parseFloat(firstClassTotal) * 150;
-                const economyClassTotal = document.getElementById("economyClass-add ").value;
+                const economyClassTotal = document.getElementById("economyClass-add").value;
                 const economyClassTotalNumber = parseFloat(economyClassTotal) * 100;
                 const subTotal = firstClassTotalNumber + economyClassTotalNumber;
-                document.getElementById("subTotal ").innerText = subTotal;
+                document.getElementById("subTotal").innerText = subTotal;
 
                 const tex = subTotal * .1;  
-                document.getElementById("tex ").innerText = tex;
+                document.getElementById("tex").innerText = tex;
 
                 const total = subTotal + tex;
-                document.getElementById("total ").innerText = total;
+                document.getElementById("total").innerText = total;
             }
                         //   End Message
 
             function message() {
 
-                document.getElementById("form ").style.display = "none ";
-                document.getElementById("book-btn ").style.display = "none ";
-                document.getElementById("calculateSummary ").style.color = "black ";
-                document.getElementById("welcome ").style.color = "tomato ";
+                document.getElementById("form").style.display = "none";
+                document.getElementById("book-btn").style.display = "none";
+                document.getElementById("calculateSummary").style.color = "black";
+                document.getElementById("welcome").style.color = "tomato";
 
             
-                const getSubTotal = document.getElementById("subTotal ").innerText;
+                const getSubTotal = document.getElementById("subTotal").innerText;
 
                 if (getSubTotal == '0') {
-                    window.alert("Do You Need Any Help ") ;
+                    window.alert("Do You Need Any Help") ;
                     } else {
-                    document.getElementById("welcome ").innerText = "Thanks and enjoy the journey ";
+                    document.getElementById("welcome").innerText = "Thanks and enjoy the journey";
                 }    
             }
         </script>      
